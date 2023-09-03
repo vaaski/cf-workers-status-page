@@ -5,82 +5,67 @@ settings:
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
+  allmonitorsOperational: 'All Systems Epicly Working'
   notAllmonitorsOperational: 'Some Systems Fucked'
-  monitorLabelOperational: 'Operational'
+  monitorLabelOperational: 'Not Fucked'
   monitorLabelNotOperational: 'Fucked'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
+  monitorLabelNoData: 'idk'
+  dayInHistogramNoData: 'idk'
   dayInHistogramOperational: 'All good'
   dayInHistogramNotOperational: ' fuckup(s)' # xx incident(s) recorded
 
 monitors:
-  # - id: workers-cloudflare-com # unique identifier
-  #   name: workers.cloudflare.com
-  #   description: 'You write code. They handle the rest.' # default=empty
-  #   url: 'https://workers.cloudflare.com/' # URL to fetch
-  #   method: GET # default=GET
-  #   expectStatus: 200 # operational status, default=200
-  #   followRedirect: false # should fetch follow redirects, default=false
-  #   linkable: false # allows the title to be a link, default=true
-
-  # - id: www-cloudflare-com
-  #   name: www.cloudflare.com
-  #   description: 'Built for anything connected to the Internet.'
-  #   url: 'https://www.cloudflare.com'
-  #   method: GET
-  #   expectStatus: 200
-  #   linkable: true # allows the title to be a link, default=true
-
-  # - id: blog-cloudflare-com
-  #   name: The Cloudflare Blog
-  #   url: 'https://blog.cloudflare.com/'
-  #   method: GET
-  #   expectStatus: 200
-
   - id: jellyfin
-    name: jelly.vaaski.dev
-    description: "Jellyfin streaming server"
-    url: "https://jelly.vaaski.dev"
+    name: Jellyfin
+    description: "The Free Software Media System"
+    url: "https://jelly.vaaski.dev/web/index.html"
     method: GET
     expectStatus: 200
     linkable: true
 
-  - id: hserver
-    name: home.vaaski.dev
-    description: "Home server"
-    url: "https://home.vaaski.dev/static"
-    method: GET
-    expectStatus: 200
-    linkable: true
-
-  - id: hetzner server
-    name: hetzner.vaaski.dev
-    description: "Hetzner server"
+  - id: hetzner
+    name: Hetzner VPS
+    description: "Hetzner VPS"
     url: "https://hetzner.vaaski.dev"
     method: GET
     expectStatus: 200
     linkable: false
 
-  - id: mail
-    name: mail.vaaski.dev
-    description: "Email server"
-    url: "https://mail.vaaski.dev"
+  - id: hserver
+    name: Static Home File Server
+    description: "Static Home File Server"
+    url: "https://home.vaaski.dev/static/"
     method: GET
     expectStatus: 200
-    linkable: false
+    linkable: true
 
   - id: send
-    name: send.vaaski.dev
-    description: "Send server"
+    name: Mozilla Send
+    description: "📬 Simple, private file sharing."
     url: "https://send.vaaski.dev"
     method: GET
     expectStatus: 200
     linkable: true
 
+  - id: mail
+    name: Email Server
+    description: "Email Server"
+    url: "https://mail.vaaski.dev"
+    method: GET
+    expectStatus: 200
+    linkable: false
+
+  - id: resync
+    name: Resync Backend
+    description: "Resync Backend"
+    url: "https://hetzner.vaaski.dev/resync/?EIO=4&transport=polling"
+    method: GET
+    expectStatus: 200
+
   - id: fuckmoodle
-    name: fuckmoodle
+    name: Fuckmoodle Backend
     description: "Fuckmoodle backend"
     url: "https://pissfried.shr.li"
     method: GET
     expectStatus: 302
+
