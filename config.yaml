@@ -75,6 +75,6 @@ monitors:
 
   - id: fuckmoodle
     name: Fuckmoodle Backend
-    url: "https://pissfried.shr.li"
+    url: "https://pissfried.shr.li/fuckmoodle/?EIO=4&transport=polling"
     expectStatus: 302
 
