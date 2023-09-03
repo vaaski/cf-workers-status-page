@@ -1,5 +1,5 @@
 settings:
-  title: 'Status Page'
+  title: 'vaaski.dev service status'
   url: 'https://status.vaaski.dev' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
@@ -19,53 +19,62 @@ monitors:
     name: Jellyfin
     description: "The Free Software Media System"
     url: "https://jelly.vaaski.dev/web/index.html"
-    method: GET
-    expectStatus: 200
-    linkable: true
+
+  - id: jellyseerr
+    name: Jellyseerr
+    description: "fork of overseerr for jellyfin support"
+    url: "https://seerr.vaaski.dev/login"
 
   - id: hetzner
     name: Hetzner VPS
-    description: "Hetzner VPS"
     url: "https://hetzner.vaaski.dev"
-    method: GET
-    expectStatus: 200
     linkable: false
 
   - id: hserver
-    name: Static Home File Server
-    description: "Static Home File Server"
+    name: Static File Server
     url: "https://home.vaaski.dev/static/"
-    method: GET
-    expectStatus: 200
-    linkable: true
 
   - id: send
-    name: Mozilla Send
+    name: FF Send
     description: "📬 Simple, private file sharing."
     url: "https://send.vaaski.dev"
-    method: GET
-    expectStatus: 200
-    linkable: true
 
   - id: mail
     name: Email Server
-    description: "Email Server"
     url: "https://mail.vaaski.dev"
-    method: GET
-    expectStatus: 200
     linkable: false
 
   - id: resync
-    name: Resync Backend
-    description: "Resync Backend"
+    name: resync
     url: "https://hetzner.vaaski.dev/resync/?EIO=4&transport=polling"
-    method: GET
-    expectStatus: 200
+
+  - id: transmission
+    name: Transmission WebUI
+    url: "https://transmission.vaaski.dev"
+    expectStatus: 401
+
+  - id: jdownloader
+    name: JDownloader 2 WebUI
+    url: "https://jdownloader.vaaski.dev"
+    expectStatus: 401
+
+  - id: radarr
+    name: Radarr
+    url: "https://radarr.vaaski.dev"
+    expectStatus: 401
+
+  - id: sonarr
+    name: Sonarr
+    url: "https://sonarr.vaaski.dev"
+    expectStatus: 401
+
+  - id: prowlarr
+    name: Prowlarr
+    url: "https://prowlarr.vaaski.dev"
+    expectStatus: 401
 
   - id: fuckmoodle
     name: Fuckmoodle Backend
-    description: "Fuckmoodle backend"
     url: "https://pissfried.shr.li"
-    method: GET
     expectStatus: 302
 
