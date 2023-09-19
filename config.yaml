@@ -51,27 +51,27 @@ monitors:
   - id: transmission
     name: Transmission WebUI
     url: "https://transmission.vaaski.dev"
-    expectStatus: 401
+    followRedirect: true
 
   - id: jdownloader
     name: JDownloader 2 WebUI
     url: "https://jdownloader.vaaski.dev"
-    expectStatus: 401
+    followRedirect: true
 
   - id: radarr
     name: Radarr
     url: "https://radarr.vaaski.dev"
-    expectStatus: 401
+    followRedirect: true
 
   - id: sonarr
     name: Sonarr
     url: "https://sonarr.vaaski.dev"
-    expectStatus: 401
+    followRedirect: true
 
   - id: prowlarr
     name: Prowlarr
     url: "https://prowlarr.vaaski.dev"
-    expectStatus: 401
+    followRedirect: true
 
   - id: fuckmoodle
     name: Fuckmoodle Backend
