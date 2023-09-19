@@ -30,9 +30,9 @@ monitors:
     url: "https://hetzner.vaaski.dev"
     linkable: false
 
-  - id: hserver
-    name: Static File Server
-    url: "https://home.vaaski.dev/static/"
+  # - id: hserver
+  #   name: Static File Server
+  #   url: "https://home.vaaski.dev/static/"
 
   - id: send
     name: FF Send
